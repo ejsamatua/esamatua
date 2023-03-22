@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles, Drawer, List, Button, Divider, ListItem, Link as MuiLink } from "@material-ui/core";
 import { Link } from "react-scroll";
 import DarkModeSwitcher from "../DarkModeSwitcher";
-import LangSelector from "./LangSelector";
 import { useTranslation } from "react-i18next";
 
 const MobileMenu = ({ open, onClose, onOpen }) => {
@@ -49,7 +48,6 @@ const MobileMenu = ({ open, onClose, onOpen }) => {
                         </Button>
                     </ListItem>
                     <ListItem className={classes.btnContainer}>
-                        <LangSelector onClose={onClose} />
                     </ListItem>
                     <ListItem className={classes.btnContainer}>
                         <DarkModeSwitcher onClose={onClose} />

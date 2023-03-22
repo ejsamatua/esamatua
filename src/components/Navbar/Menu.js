@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { Tab, Tabs, Button, makeStyles, withStyles, Link as MuiLink } from "@material-ui/core";
 import { motion, useAnimation } from "framer-motion";
 import { Link, Events } from "react-scroll";
-import LangSelector from "./LangSelector";
 import LoaderContext from "../../contexts/loaderContext";
 import { useTranslation } from "react-i18next";
 
@@ -121,7 +120,6 @@ const Menu = ({homeIsActive}) => {
                 </Button>
             </motion.div>
             <motion.div custom={5} animate={controls}>
-                <LangSelector style={{ marginLeft: "32px" }} />
             </motion.div>
         </div>
     );

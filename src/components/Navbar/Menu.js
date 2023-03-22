@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { Link, Events } from "react-scroll";
 import LoaderContext from "../../contexts/loaderContext";
 import { useTranslation } from "react-i18next";
+import Resume from './resume.pdf'
 
 const smoothScrollProps = {
     spy: true,
@@ -109,15 +110,21 @@ const Menu = ({homeIsActive}) => {
                 />
             </StyledTabs>
             <motion.div custom={4} animate={controls}>
+                <a href={Resume}
+
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    style={{textDecoration: 'none'}}
+                    >
                 <Button
                     component={MuiLink}
-                    href="/resume.pdf"
+                    download='public/resume.pdf'
                     variant="outlined"
                     color="primary"
                     underline="none"
-                >
-                    {t('menu_resume')}
-                </Button>
+                    >
+                        {t('menu_resume')}
+                </Button></a>
             </motion.div>
             <motion.div custom={5} animate={controls}>
             </motion.div>

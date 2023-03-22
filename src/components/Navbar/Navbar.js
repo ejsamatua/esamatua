@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { makeStyles, useTheme, useMediaQuery, AppBar, Toolbar, Hidden } from "@material-ui/core";
 import { motion, useAnimation } from "framer-motion";
-import Logo from "./Logo";
+
 import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
 import HamburgerIcon from "./HamburgerIcon";
@@ -55,8 +55,9 @@ const Navbar = () => {
                         stiffness: 260,
                         damping: 20,
                     }}
+                    style={{ paddingLeft: "600px"}}
                 >
-                    <Logo className={classes.logo} setHomeIsActive={setHomeIsActive} />
+
                     <Hidden smDown>
                         <Menu homeIsActive={homeIsActive} />
                     </Hidden>

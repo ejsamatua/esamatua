@@ -5,12 +5,12 @@ import { useTranslation } from "react-i18next";
 
 const DarkModeSwitcher = ({ onClose }) => {
     const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
-    const { t } = useTranslation()
+    const { t } = useTranslation();
     return (
         <FormControlLabel
             control={
                 <Switch
-                    checked={isDarkMode}
+                    checked={!isDarkMode}
                     name="checkedDarkMode"
                     color="primary"
                     onChange={() => {
@@ -24,6 +24,10 @@ const DarkModeSwitcher = ({ onClose }) => {
             label={t('dark_mode')}
         />
     );
+};
+
+DarkModeSwitcher.defaultProps = {
+    isDarkMode: true
 };
 
 export default DarkModeSwitcher;

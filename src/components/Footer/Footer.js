@@ -11,7 +11,7 @@ const Footer = () => {
             <Divider style={{ backgroundColor: theme.palette.primary.main }} />
             <Box className={classes.footer}>
                 {isMobile && <Social mobile />}
-                <Typography variant="body2" color="initial">
+                <Typography variant="body2" color="initial" style={{fontSize: "5px"}}>
                     © 2021 Mehdi BHA, Inc
                 </Typography>
             </Box>

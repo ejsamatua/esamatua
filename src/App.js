@@ -21,6 +21,7 @@ function App() {
     }, []);
     return (
         <Router>
+            
             <Suspense fallback={<div></div>}>
                 <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
                     <LoaderContext.Provider value={{ isLoading, setIsLoading }}>
